@@ -28,6 +28,7 @@
 #import <UIKit/UIKit.h>
 
 #import <Cordova/CDVViewController.h>
+#import "SliderViewController.h"
 
 @interface AppDelegate : NSObject <UIApplicationDelegate>{}
 

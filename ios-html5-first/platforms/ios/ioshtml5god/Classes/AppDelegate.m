@@ -26,7 +26,9 @@
 //
 
 #import "AppDelegate.h"
-#import "MainViewController.h"
+#import "NaviViewController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 #import <Cordova/CDVPlugin.h>
 
@@ -63,6 +65,7 @@
  */
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    /*
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
 
 #if __has_feature(objc_arc)
@@ -77,7 +80,7 @@
 #else
         self.viewController = [[[MainViewController alloc] init] autorelease];
 #endif
-
+*/
     // Set your app's start page by setting the <content src='foo.html' /> tag in config.xml.
     // If necessary, uncomment the line below to override it.
     // self.viewController.startPage = @"index.html";
@@ -85,10 +88,24 @@
     // NOTE: To customize the view's frame size (which defaults to full screen), override
     // [self.viewController viewWillAppear:] in your view controller.
 
-    self.window.rootViewController = self.viewController;
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    
+    [SliderViewController sharedSliderController].mainVCClassName = @"SlideMainViewController";
+    
+    [SliderViewController sharedSliderController].LeftVC=[[LeftViewController alloc] init];
+    [SliderViewController sharedSliderController].RightVC=[[RightViewController alloc] init];
+    
+    [SliderViewController sharedSliderController].LeftSContentScale=1.0;
+    [SliderViewController sharedSliderController].RightSContentScale=1.0;
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[SliderViewController sharedSliderController]];
+    
+    
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
     return YES;
+
 }
 
 // this happens while we are running ( in the background, or from within our own app )
