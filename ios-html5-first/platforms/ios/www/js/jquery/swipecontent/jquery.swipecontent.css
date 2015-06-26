@@ -1,0 +1,29 @@
+@CHARSET "UTF-8";
+
+.body{
+    padding:0px;
+    margin:0px;
+}
+
+.appContent{
+    overflow:hidden;
+}
+
+.appContent ul{
+    list-style:none;
+    position:relative;
+    margin:0px;
+    padding:0px;   
+}
+
+.appContent li{
+    display:block;
+    float:left;   
+}
+
+
+.swipeContentHandler{
+    position:absolute;
+    z-index:999;
+    background-image:url('trans.png');
+}

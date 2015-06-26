@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ioshtml5">
+        <wb-resource deploy-path="/" source-path="/apps/phonegaphtml5/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/phonegaphtml5/iphone"/>
+        <wb-resource deploy-path="/" source-path="/apps/phonegaphtml5/android"/>
+        <property name="context-root" value="ioshtml5"/>
+    </wb-module>
+</project-modules>

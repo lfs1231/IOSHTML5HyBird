@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 执行说明：放在与CloudDataCollector并行目录执行
-	 内部调用顺序：初始化->创建文件夹->编译->输出->上传
-  -->
+<!-- 执行说明：放在与CloudDataCollector并行目录执行 内部调用顺序：初始化->创建文件夹->编译->输出->上传 -->
 <project name="CordovaDist" default="output" basedir=".">
 
 
@@ -10,11 +8,16 @@
 	<property name="cordovaproject" value="." />
 	<property name="common_www_src" value="${cordovaproject}/www" />
 	<property name="ios_www_src" value="${cordovaproject}/platforms/ios/www" />
-	<property name="android_www_src" value="${cordovaproject}/platforms/android/assets/www" />
+	<property name="android_www_src"
+		value="${cordovaproject}/platforms/android/assets/www" />
+
+	<property name="worklight_www_src"
+		value="${cordovaproject}/webdebug/ioshtml5-worklight7/apps/phonegaphtml5/common" />
 
 	<target name="clean">
 		<delete dir="${ios_www_src}" failonerror="false" />
 		<delete dir="${android_www_src}" failonerror="false" />
+		<delete dir="${worklight_www_src}" failonerror="false" />
 	</target>
 
 	<!-- 输出到相关目录 -->
@@ -24,14 +27,25 @@
 			<fileset dir="${common_www_src}">
 				<include name="**/*" />
 				<exclude name="**/*.svn" />
+				<exclude name="**/*.git" />
 			</fileset>
 		</copy>
 		<copy todir="${android_www_src}" overwrite="true">
 			<fileset dir="${common_www_src}">
 				<include name="**/*" />
 				<exclude name="**/*.svn" />
+				<exclude name="**/*.git" />
 			</fileset>
 		</copy>
+
+		<copy todir="${worklight_www_src}" overwrite="true">
+			<fileset dir="${common_www_src}">
+				<include name="**/*" />
+				<exclude name="**/*.svn" />
+				<exclude name="**/*.git" />
+			</fileset>
+		</copy>
+
 	</target>
 
 </project>

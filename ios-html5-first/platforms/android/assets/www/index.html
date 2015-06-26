@@ -1,46 +1,114 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device89988</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="msapplication-tap-highlight" content="no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<link href="js/jquery/jquery.mobile-1.4.5.css" rel="stylesheet"
+	type="text/css" />
+<link href="js/jquery/zebradialog/zebra_dialog.css" rel="stylesheet"
+	type="text/css" />
+
+<link class="text/css" rel="stylesheet" type="text/css"
+	href="js/jquery/iscroll/iscroll.css" />
+<link class="text/css" rel="stylesheet" type="text/css"
+	href="js/jquery/swipecontent/jquery.swipecontent.css" />
+
+<link rel="stylesheet" href="css/main.css">
+<script>
+	window.$ = window.jQuery = WLJQ;
+</script>
+<title>Cordova JQ</title>
+</head>
+<body>
+
+	<div data-role="page" id="page_introduction" data-thmem="a">
+		<div id="eipwrapper">
+			<div id="scroller">
+				<div>
+					<ul id="introduceList">
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="commonFlyDivShow" style="display: none" class="flyDIV">
+		<li><img id="eipUnvailable" src="img/Unvailable.png"
+			width="25" height="25" /></li>
+		<li>网络不给力！</li>
+	</div>
+	<div id="commonFlyDivShow1" style="display: none" class="flyDIV">
+		<li>网络不给力！</li>
+	</div>
+	<script
+		src="http://192.168.1.112:10004/target/target-script-min.js#anonymous"></script>
+
+	<script src="js/jquery/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap/Chart.js"></script>
+
+	<script src="js/jquery/jquery.mobile-1.4.5.js"></script>
+	<script src="js/jquery/jquery.json-2.4.min.js"></script>
+	<script src="js/jquery/zebradialog/zebra_dialog.js"></script>
+	<script src="js/jquery/swipecontent/jquery.swipecontent.js"></script>
+
+	<script src="js/jquery/iscroll/iscroll.js"></script>
+	<script src="js/jquery/iscroll/iscroll-probe.js"></script>
+	<script src="js/jquery/iscroll/iscrollutil.js"></script>
+	<script src="js/jquery/iscroll/iscroll5helper.js"></script>
+	<script src="js/jquery/iscroll/iscroll-pull-push.js"></script>
+	<script src="js/jquery/jQuery.md5.js"></script>
+	<script src="js/jquery/jquery.imagecache.js"></script>
+	<script src="js/jquery/jquery.filedownload.js"></script>
+
+	<script type="text/javascript" src="js/util/dateUtil.js"></script>
+	<script type="text/javascript" src="js/util/commonUtil.js"></script>
+	<script type="text/javascript" src="js/util/des.js"></script>
+	<script type="text/javascript" src="js/util/imageUtil.js"></script>
+	<script type="text/javascript" src="js/util/uploadfile.js"></script>
+	<script type="text/javascript" src="js/util/exitAppDialog.js"></script>
+	<script type="text/javascript" src="js/util/jsDataModel.js"></script>
+
+
+	<!--  plugin definition -->
+	<script type="text/javascript" src="js/plugins/NativeEventsListener.js"></script>
+	<script type="text/javascript" src="js/plugins/MyHybridBridge.js"></script>
+	<script type="text/javascript"
+		src="js/plugins/fileOpenerPluginForAndroid.js"></script>
+	<script type="text/javascript"
+		src="js/plugins/pushInfoPluginForAndroid.js"></script>
+	<script type="text/javascript"
+		src="js/plugins/PushNotificationForIOS.js"></script>
+	<script type="text/javascript"
+		src="js/plugins/exitAppForWindowsPhone.js"></script>
+	<script type="text/javascript" src="js/plugins/inappbrowser.js"></script>
+
+
+	<!-- begin project def -->
+	<script type="text/javascript" src="js/business/base.js"></script>
+	<script type="text/javascript" src="js/business/common.js"></script>
+
+	<!-- end project def -->
+    <!-- 
+	<script type="text/javascript" src="cordova.js"></script> -->
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+
+   <!--  worlight7.0 debug ,please remove them when releasing your app -->
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+</body>
 </html>

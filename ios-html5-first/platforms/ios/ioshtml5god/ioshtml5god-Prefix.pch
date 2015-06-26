@@ -31,3 +31,6 @@
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
 #endif
+
+
+#define FRAMEHEADHIGHT 25

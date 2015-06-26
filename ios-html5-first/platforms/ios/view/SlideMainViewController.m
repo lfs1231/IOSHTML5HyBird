@@ -8,6 +8,8 @@
 
 #import "SlideMainViewController.h"
 
+
+
 @interface SlideMainViewController ()
 
 @end
@@ -40,14 +42,14 @@
     [self.view addSubview:navBar];
     
     UIButton *leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    leftBtn.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, 44, 44);
+    leftBtn.frame = CGRectMake(0, [UIApplication sharedApplication].statusBarFrame.size.height, FRAMEHEADHIGHT, FRAMEHEADHIGHT);
     [leftBtn setTitle:@"左" forState:UIControlStateNormal];
     [leftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [leftBtn addTarget:self action:@selector(leftItemClick) forControlEvents:UIControlEventTouchUpInside];
     [navBar addSubview:leftBtn];
     
     UIButton *rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    rightBtn.frame = CGRectMake(self.view.frame.size.width-44, [UIApplication sharedApplication].statusBarFrame.size.height, 44, 44);
+    rightBtn.frame = CGRectMake(self.view.frame.size.width-FRAMEHEADHIGHT, [UIApplication sharedApplication].statusBarFrame.size.height, FRAMEHEADHIGHT, FRAMEHEADHIGHT);
     [rightBtn setTitle:@"右" forState:UIControlStateNormal];
     [rightBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [rightBtn addTarget:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
@@ -60,7 +62,7 @@
 #else
     self.cordovaWebView = [[[MainViewController alloc] init] autorelease];
 #endif
-    int headHight=44+[UIApplication sharedApplication].statusBarFrame.size.height;
+    int headHight=FRAMEHEADHIGHT+[UIApplication sharedApplication].statusBarFrame.size.height;
     self.cordovaWebView.view.frame=
     CGRectMake(0,headHight,self.view.frame.size.width, self.view.frame.size.height-headHight);
     

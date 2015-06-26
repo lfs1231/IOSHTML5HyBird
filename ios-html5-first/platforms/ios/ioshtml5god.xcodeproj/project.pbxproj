@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		014E36F0BD3F4FAB94EAE640 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29517BE5D21F4750BFA6E0AF /* ImageIO.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		171BA0D01B3A82020057C29E /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 171BA0CD1B3A82020057C29E /* ViewController1.m */; };

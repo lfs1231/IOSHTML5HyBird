@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2C0C01E1-4638-4822-B1B1-DA87915B7E40</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ioshtml5Phonegaphtml5Iphone</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B2E4F43BAC45A5F5181141658EED77F45AD9FCB7</key>
+		<string>https://github.com/lfs1231/IOSHTML5HyBird.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ios-html5-first/webdebug/ioshtml5-worklight7/apps/phonegaphtml5/iphone/native/ioshtml5Phonegaphtml5Iphone.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B2E4F43BAC45A5F5181141658EED77F45AD9FCB7</key>
+		<string>../../../../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lfs1231/IOSHTML5HyBird.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B2E4F43BAC45A5F5181141658EED77F45AD9FCB7</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B2E4F43BAC45A5F5181141658EED77F45AD9FCB7</string>
+			<key>IDESourceControlWCCName</key>
+			<string>IOSHTML5HyBird</string>
+		</dict>
+	</array>
+</dict>
+</plist>

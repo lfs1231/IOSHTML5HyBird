@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+
+
+#page_introduction #eipwrapper {
+	position:absolute; z-index:1;
+	top:0px; bottom:0; left:0;
+	width:100%;
+	background:#aaa;
+	overflow:auto;
+}
+
+#page_introduction #scroller {
+	height:100%;
+	float:left;
+	padding:0;
+}
+
+
+#page_introduction #scroller li {
+	display:block;
+	vertical-align:middle;
+	float:left;
+	padding:0 0px;
+	height:100%;
+	
+}
